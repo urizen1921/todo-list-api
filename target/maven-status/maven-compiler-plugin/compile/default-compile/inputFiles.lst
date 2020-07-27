@@ -1,0 +1,10 @@
+/home/urizen1921/Documents/gitHubProjects/todo-api/todo-list-api/src/main/java/org/paulopaula/todolist/persistence/dao/TodoListDao.java
+/home/urizen1921/Documents/gitHubProjects/todo-api/todo-list-api/src/main/java/org/paulopaula/todolist/persistence/model/TodoItem.java
+/home/urizen1921/Documents/gitHubProjects/todo-api/todo-list-api/src/main/java/org/paulopaula/todolist/persistence/dao/JpaTodoItemDao.java
+/home/urizen1921/Documents/gitHubProjects/todo-api/todo-list-api/src/main/java/org/paulopaula/todolist/controller/TodoItemController.java
+/home/urizen1921/Documents/gitHubProjects/todo-api/todo-list-api/src/main/java/org/paulopaula/todolist/services/TodoItemServiceImpl.java
+/home/urizen1921/Documents/gitHubProjects/todo-api/todo-list-api/src/main/java/org/paulopaula/todolist/persistence/dao/GenericJpaDao.java
+/home/urizen1921/Documents/gitHubProjects/todo-api/todo-list-api/src/main/java/org/paulopaula/todolist/persistence/dao/Dao.java
+/home/urizen1921/Documents/gitHubProjects/todo-api/todo-list-api/src/main/java/org/paulopaula/todolist/services/TodoItemService.java
+/home/urizen1921/Documents/gitHubProjects/todo-api/todo-list-api/src/main/java/org/paulopaula/todolist/persistence/model/Model.java
+/home/urizen1921/Documents/gitHubProjects/todo-api/todo-list-api/src/main/java/org/paulopaula/todolist/persistence/model/AbstractModel.java

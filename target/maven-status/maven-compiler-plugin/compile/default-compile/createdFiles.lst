@@ -1,0 +1,10 @@
+org/paulopaula/todolist/persistence/model/Model.class
+org/paulopaula/todolist/controller/TodoItemController.class
+org/paulopaula/todolist/persistence/dao/JpaTodoItemDao.class
+org/paulopaula/todolist/persistence/model/AbstractModel.class
+org/paulopaula/todolist/services/TodoItemServiceImpl.class
+org/paulopaula/todolist/persistence/dao/Dao.class
+org/paulopaula/todolist/services/TodoItemService.class
+org/paulopaula/todolist/persistence/dao/GenericJpaDao.class
+org/paulopaula/todolist/persistence/dao/TodoListDao.class
+org/paulopaula/todolist/persistence/model/TodoItem.class

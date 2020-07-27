@@ -3,9 +3,12 @@ package org.paulopaula.todolist.services;
 import org.paulopaula.todolist.persistence.dao.TodoListDao;
 import org.paulopaula.todolist.persistence.model.TodoItem;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Service
 public class TodoItemServiceImpl implements TodoItemService{
 
     private TodoListDao todoListDao;
@@ -20,6 +23,7 @@ public class TodoItemServiceImpl implements TodoItemService{
         return todoListDao.findById(id);
     }
 
+    @Transactional
     @Override
     public TodoItem save(TodoItem todoItem) {
         return todoListDao.saveOrUpdate(todoItem);

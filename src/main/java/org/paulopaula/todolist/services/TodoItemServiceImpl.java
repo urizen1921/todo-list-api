@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TodoItemServiceImpl implements TodoItemService{
@@ -29,8 +30,15 @@ public class TodoItemServiceImpl implements TodoItemService{
         return todoListDao.saveOrUpdate(todoItem);
     }
 
+    @Transactional
     @Override
-    public void delete(Integer id) {
+    public void delete(Integer id) throws Exception {
+
+        //TODO: Need to create classes for exceptions... they can't all be generic exceptions
+
+        TodoItem todoItem = Optional.ofNullable(todoListDao.findById(id))
+                .orElseThrow(Exception::new);
+
         todoListDao.delete(id);
     }
 

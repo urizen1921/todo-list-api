@@ -10,7 +10,7 @@ public interface TodoItemService {
 
     TodoItem save(TodoItem todoItem);
 
-    void delete(Integer id);
+    void delete(Integer id) throws Exception;
 
     List<TodoItem> list();
 }

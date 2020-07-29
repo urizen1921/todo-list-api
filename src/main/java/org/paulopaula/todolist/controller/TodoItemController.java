@@ -28,6 +28,7 @@ public class TodoItemController {
 
     @RequestMapping(method = RequestMethod.GET, path = {"/", ""})
     public ResponseEntity<List<TodoItem>> listTodoItems() {
+        System.out.println("Hello");
 
         //TODO: conversion from todoItem to todoItemDTO
 
@@ -52,6 +53,19 @@ public class TodoItemController {
         headers.setLocation(uriComponents.toUri());
 
         return new ResponseEntity<>(headers, HttpStatus.CREATED);
+    }
+
+    @RequestMapping(method = RequestMethod.DELETE, path = "/{id}")
+    public ResponseEntity<TodoItem> deleteTodoItem(@PathVariable Integer id) {
+
+        //TODO: write exceptions properly and all cases
+        System.out.println(id);
+        try {
+            todoItemService.delete(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
     }
 
 

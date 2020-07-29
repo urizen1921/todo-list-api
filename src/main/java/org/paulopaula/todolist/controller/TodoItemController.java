@@ -68,5 +68,26 @@ public class TodoItemController {
         }
     }
 
+    @RequestMapping(method = RequestMethod.PUT, path = "/{id}")
+    public ResponseEntity<TodoItem> editTodoItem(@Valid @RequestBody TodoItem todoItem, BindingResult bindingResult, @PathVariable Integer id) {
+
+        if(bindingResult.hasErrors()) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        if (todoItem.getId() != null && !todoItem.getId().equals(id)) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        if (todoItemService.get(id) == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        todoItemService.save(todoItem);
+        return new ResponseEntity<>(HttpStatus.OK);
+
+
+    }
+
 
 }
